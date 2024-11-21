@@ -1,0 +1,74 @@
+.btnC{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.formControls{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* align-items: center; */
+    position: relative;
+
+}
+.formControls input{
+       height: 40px;
+       /* margin-left: 20px; */
+       /* margin: 0 auto; */
+       /* margin-top: 20px; */
+}
+.email{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.text{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    
+}
+.text input{
+    height: 120px;
+}
+.formControls label{
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: white;
+    padding: 0 12px;
+}
+.formControls input{
+    padding: 20px;
+}
+.email label{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background-color: white;
+    padding: 0 12px;
+}
+.text label{
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    background-color: white;
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.container{
+    display: flex;
+    width: 60%;
+}
+.submit{
+    display: flex;
+    /* justify-content: end; */
+    margin-top: 20px;
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+ :root{
+  --red: #D01C28;
+  --gray: #5A5959;
+ }
+html, body{
+height: 100%;
+width: 100%;
+}
+.btn-log{
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.nav-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* margin: 0 auto; */
+  /* margin-left: 100px; */
+  padding: 20px;
+  
+}
+nav{
+  display: flex;
+  align-items: center;
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 72px;
+  /* position: absolute; */
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  /* margin-bottom: 1000px; */
+  
+}
+ul{
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+main{
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 72px);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 70px;
+}
+.content h1{
+    font-weight: 800;
+    font-size: 95px;
+    line-height: 80px;
+}
+.content p{
+  font-weight: 600;
+  color: var(--gray);
+  max-width: 400px;
+}
+.buttons-hero{
+  display: flex;
+  gap: 40px;
+}
+.btn-shop{
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.sec-btn{
+  all: unset;
+  background-color: transparent;
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  padding: 6px 16px;
+  /* height: 32px; */
+  /* font-weight: 500; */
+  border-radius: 10px;
+}
+
+.shopping p{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.brand-icon{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.buttons-hero button{
+  font-size: 20px;
+}
