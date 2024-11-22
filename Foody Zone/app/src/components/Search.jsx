@@ -1,52 +1,54 @@
 import React from "react";
 import styled from "styled-components";
-import { BASE_URL, Button } from "../App";
+import { BASE_URL, Button, Container } from "../App";
 
 // const searchResult = ({ data }) =>
-  function Search({ data }) {
-    console.log(data)
-    return (
-      <FoodCard>
+function Search({ data }) {
+  console.log(data);
+  return (
+    <FoodCard>
+      <Container>
         <Cards>
-          {data?.map(({name, image, text, price}) => (
+          {data?.map(({ name, image, text, price }) => (
             <Card key={name}>
-                <div className="food_image">
-                    <img src={BASE_URL + image} alt="" />
+              <div className="food_image">
+                <img src={BASE_URL + image} alt="" />
+              </div>
+              <div className="food_info">
+                <div className="info">
+                  <h3>{name}</h3>
+                  <p>{text}</p>
                 </div>
-                <div className="food_info">
-                    <div className="info">
-                        <h3>{name}</h3>
-                        <p>{text}</p>
-                    </div>
                 <Button>${price.toFixed(2)}</Button>
-                </div>
+              </div>
             </Card>
           ))}
         </Cards>
-      </FoodCard>
-    );
-  };
+      </Container>
+    </FoodCard>
+  );
+}
 
 export default Search;
 
 const FoodCard = styled.section`
-  height: calc(100vh - 215px);
+  min-height: calc(100vh - 215px);
   background-size: cover;
   background-image: url(BG.png);
 `;
 
 const Cards = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 32px;
-    column-gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
 `;
 
 const Card = styled.div`
-    width: 340px;
+  width: 340px;
   height: 167px;
   border: 0.66px solid;
 
@@ -75,22 +77,22 @@ const Card = styled.div`
 
   display: flex;
   padding: 8px;
-  h3{
+  h3 {
     margin-top: 8px;
     font-size: 16px;
     font-weight: 500;
   }
-    p{
-        margin-top: 4px;
-        font-size: 12px;
-    }
-    button{
-        font-size: 12px;
-    }
-    .food_info{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: end;
-    }
+  p {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+  }
+  .food_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
 `;
