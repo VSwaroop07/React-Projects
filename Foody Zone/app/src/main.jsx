@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     /* background-image: url(BG.png); */
     color: white;
     min-height: 100vh;
-
+    font-family: "Inter", sans-serif;
   }
 
 `
