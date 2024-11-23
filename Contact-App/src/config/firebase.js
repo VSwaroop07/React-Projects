@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD25a2uU1usBulu1hmMMOOSooEEribWlIE",
-  authDomain: "contacts-app-e57e4.firebaseapp.com",
-  projectId: "contacts-app-e57e4",
-  storageBucket: "contacts-app-e57e4.firebasestorage.app",
-  messagingSenderId: "177647125242",
-  appId: "1:177647125242:web:4800ef2e0bc18aa6f4bf43"
+  apiKey: "Create Your Own",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
