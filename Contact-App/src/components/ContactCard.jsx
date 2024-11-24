@@ -6,6 +6,7 @@ import { RiEditCircleLine } from "react-icons/ri";
 import { db } from "../config/firebase";
 import UpdateDelete from "./UpdateDelete";
 import useDisclose from "../hooks/useDisclose";
+import { toast } from "react-toastify";
 
 const ContactCard = ({contacts}) => {
 
@@ -13,6 +14,7 @@ const ContactCard = ({contacts}) => {
     const deleteContact = async (id) => {
         try {
             await deleteDoc(doc(db, "Contacts", id))
+            toast.success("Contact Deleted Successfully")
         } catch (error) {
             console.log(error)
         }
@@ -27,8 +29,8 @@ const ContactCard = ({contacts}) => {
         <div className="flex gap-2">
           <HiOutlineUserCircle className="text-orange-500 text-4xl" />
           <div className="">
-            <h2 className="font-medium">{contacts.Name}</h2>
-            <p className="text-sm">{contacts.Email}</p>
+            <h2 className="font-medium">{contacts.name}</h2>
+            <p className="text-sm">{contacts.email}</p>
           </div>
         </div>
         <div className="flex text-2xl">
