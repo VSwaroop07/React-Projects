@@ -7,17 +7,13 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "./config/firebase";
 import ContactCard from "./components/ContactCard";
 import Modal from "./components/Modal";
+import UpdateDelete from "./components/UpdateDelete";
+import useDisclose from "./hooks/useDisclose";
 
 function App() {
   const [contacts, setContacts] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const {isOpen, onOpen, onClose} = useDisclose();
 
-  const onOpen = () => {
-    setIsOpen(true);
-  };
-  const onClose = () => {
-    setIsOpen(false);
-  };
 
   useEffect(() => {
     const getContacts = async () => {
@@ -57,9 +53,7 @@ function App() {
           ))}
         </div>
       </div>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        Hi
-      </Modal>
+      <UpdateDelete isOpen={isOpen} onClose={onClose} />
     </>
   );
 }

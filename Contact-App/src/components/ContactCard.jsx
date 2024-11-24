@@ -1,10 +1,25 @@
+import { deleteDoc, doc } from "firebase/firestore";
 import React from "react";
 import { HiOutlineUserCircle } from "react-icons/hi2";
 import { IoMdTrash } from "react-icons/io";
 import { RiEditCircleLine } from "react-icons/ri";
+import { db } from "../config/firebase";
+import UpdateDelete from "./UpdateDelete";
+import useDisclose from "../hooks/useDisclose";
 
 const ContactCard = ({contacts}) => {
+
+    const {isOpen, onOpen, onClose} = useDisclose();
+    const deleteContact = async (id) => {
+        try {
+            await deleteDoc(doc(db, "Contacts", id))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
   return (
+    <>
     <div
         key={contacts.id}
         className="flex items-center bg-yellow-200 justify-between rounded-md p-2 m-1"
@@ -17,10 +32,14 @@ const ContactCard = ({contacts}) => {
           </div>
         </div>
         <div className="flex text-2xl">
-          <RiEditCircleLine />
-          <IoMdTrash className="text-orange-500" />
+          <RiEditCircleLine  onClick={onOpen} className="cursor-pointer"/>
+          <IoMdTrash className="text-orange-500 cursor-pointer" onClick={() => deleteContact(contacts.id)} />
         </div>
       </div>
+      <UpdateDelete
+       contacts={contacts} isUpdate isOpen={isOpen} onClose={onClose}
+      />
+    </>
   );
 };
 
