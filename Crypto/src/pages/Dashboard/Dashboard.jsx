@@ -1,9 +1,12 @@
-import SideNav from "../../components/SideNav"
+import { Box } from "@chakra-ui/react";
+import Layout from "../../components/Layout";
 
 const Dashboard = () => {
   return (
-    <SideNav/>
-  )
-}
+    <Layout title="Dashboard">
+      <div>Howareyou</div>
+    </Layout>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
